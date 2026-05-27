@@ -158,8 +158,10 @@ button:hover {
 
 ## OUTPUT
 
-<img width="1919" height="771" alt="image" src="https://github.com/user-attachments/assets/3e8c5733-e813-4034-8766-34371273c562" />
-<img width="1911" height="750" alt="image" src="https://github.com/user-attachments/assets/01b30645-c457-4181-833f-315a859130dd" />
+<img width="1919" height="927" alt="image" src="https://github.com/user-attachments/assets/654f590d-d6b8-4eed-a13b-784b897f3fdc" />
+
+<img width="1919" height="897" alt="image" src="https://github.com/user-attachments/assets/7d6cb0cf-3c9a-4305-8204-d1b086742fd9" />
+
 
 
 
