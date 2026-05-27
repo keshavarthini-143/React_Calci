@@ -1,5 +1,5 @@
 # Ex04 Simple Calculator - React Project
-## Date:
+## Date: 27.05.2026
 
 ## AIM
 To  develop a Simple Calculator using React.js with clean and responsive design, ensuring a smooth user experience across different screen sizes.
@@ -46,9 +46,121 @@ Deploy the website.
 Upload to GitHub Pages for free hosting.
 
 ## PROGRAM
+### App.js
+```
+import React from "react";
+import Calculator from "./Calculator";
+
+function App() {
+  return <Calculator />;
+}
+
+export default App;
+```
+### Calculator.js
+```
+import React, { useState } from "react";
+import "./Calculator.css";
+
+function Calculator() {
+  const [input, setInput] = useState("");
+
+  const click = (value) => {
+    setInput(input + value);
+  };
+
+  const clear = () => {
+    setInput("");
+  };
+
+  const calculate = () => {
+    try {
+      setInput(eval(input).toString());
+    } catch {
+      setInput("Error");
+    }
+  };
+
+  return (
+    <div className="calculator">
+
+      <input type="text" value={input} readOnly />
+
+      <div className="buttons">
+        <button onClick={clear}>C</button>
+        <button onClick={() => click("/")}>/</button>
+        <button onClick={() => click("*")}>*</button>
+        <button onClick={() => click("-")}>-</button>
+
+        <button onClick={() => click("7")}>7</button>
+        <button onClick={() => click("8")}>8</button>
+        <button onClick={() => click("9")}>9</button>
+        <button onClick={() => click("+")}>+</button>
+
+        <button onClick={() => click("4")}>4</button>
+        <button onClick={() => click("5")}>5</button>
+        <button onClick={() => click("6")}>6</button>
+        <button onClick={() => click("1")}>1</button>
+
+        <button onClick={() => click("2")}>2</button>
+        <button onClick={() => click("3")}>3</button>
+        <button onClick={() => click("0")}>0</button>
+        <button onClick={calculate}>=</button>
+      </div>
+
+    </div>
+  );
+}
+
+export default Calculator;
+```
+### Calculator.css
+```
+.calculator {
+  width: 250px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 2px solid black;
+  text-align: center;
+  background-color: white;
+}
+
+input {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 15px;
+  border: 2px solid black;
+  font-size: 24px;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 10px;
+}
+
+button {
+  height: 50px;
+  background-color: black;
+  color: white;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+```
 
 
 ## OUTPUT
+
+<img width="1919" height="771" alt="image" src="https://github.com/user-attachments/assets/3e8c5733-e813-4034-8766-34371273c562" />
+<img width="1911" height="750" alt="image" src="https://github.com/user-attachments/assets/01b30645-c457-4181-833f-315a859130dd" />
+
 
 
 ## RESULT
